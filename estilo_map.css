@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.wrapper_map {
+  background-image: linear-gradient(180deg, #853d0a, #d2691e );
+  margin: auto;
+  padding: 30px;
+  width: 80%;
+  height: 700px;
+  min-height: 700px;
+  align-items: float;
+}
+
+.topo_map {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.topo_map div {
+  display: flex;
+  color: white;
+  height: 50px;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  line-height: 40px; /* 4px +12px + 4px */
+  margin: auto;
+}
+
+#mapid {
+   
+width: 700px;
+height: 500px;
+margin: auto;
+
+
+}

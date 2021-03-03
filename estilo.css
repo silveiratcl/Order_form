@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  background-image: linear-gradient(to bottom, #853d0a, #d2691e );
+  margin: auto;
+  padding: 30px;
+  width: 80%;
+  align-items: float;
+}
+
+
+
+
+.topo {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+
+.topo div {
+  display: flex;
+  color: white;
+  height: 50px;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  line-height: 40px; /* 4px +12px + 4px */
+  margin: auto;
+}
+
+.topo h1 {
+  font: 30px;
+  font-family: 'Akaya Telivigala', cursive;
+  width: 800px;
+}
+
+.topo h2 {
+  font: 15px;
+  font-family: 'Overlock', cursive;
+  width: 800px;
+  color: white;
+}
+
+.orientacoes ol,
+li {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+  padding-top: 10px;
+  line-height: 20px; /* 4px +12px + 4px */
+  text-align: left;
+}
+
+.orientacoes ol {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin: 15px;
+  margin-top: 15px;
+  text-align: left;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  background-color: #d2691e;
+  border-radius: 10px;
+}
+
+.wrapper_prod {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 5px;
+  width: 800px;
+}
+
+/* card*/
+
+.card {
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin: 5px;
+  text-align: center;
+  font-family: arial;
+  background-color: white;
+  padding-bottom: 8px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+/* flexbox */
+
+.prods {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  width: 800px;
+}
+
+.prods div {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* end flexbox */
+
+.container_form {
+  padding: 15px;
+}
+
+.container_form input,
+option,
+select,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 250px;
+  padding: 5px;
+  border-radius: 6px;
+  margin-left: 2px;
+}
+
+.container_form label {
+  font-size: 18px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.container_form p {
+  font-size: 12px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, italic;
+}
+
+button {
+  background-color: #1ec3d2;
+  border: none;
+  color: white;
+  padding: 20px 0 20px 0;
+  border-radius: 20px;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  font-size: 25px;
+}
+
+button:hover {
+    background-color: #007a85;
+}
+
+.button_div {
+    margin: 30px;    
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  .wrapper {
+    width: 500px;
+  }
+  .topo h1,
+  h2 {
+    width: 500px;
+  }
+  .orientacoes {
+    width: 500px;
+  }
+
+  .prods {
+    width: 500px;
+  }
+  .buttonBreak {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    width: 300px;
+  }
+
+  .topo h2 {
+    display: none;
+  }
+  .orientacoes {
+    width: 90%;
+    margin: 20px;
+  }
+
+  .prods {
+    width: 300px;
+    margin: 20px;
+  }
+}

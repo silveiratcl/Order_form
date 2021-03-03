@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Overlock&display=swap" rel="stylesheet"> 
+    <title>Magia do Chocolate - 2021</title>
+
+    <!--https://www.apispreadsheets.com/tutorials/save-web-form-data.html-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function SubForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/8920/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("Pedido realizado com sucesso!");
+          },
+          error: function () {
+            alert("Erro: pedido não realizado");
+          },
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="topo">
+        <div><h1>Magia do Chocolate</h1></div>
+        <div><h2>Trufas recheadas e Ovos de colher artesanais</h2></div>
+      </div>
+
+      <div class="orientacoes">
+        <ol>
+          <li>
+            <strong>Importante:</strong> Área de cobertura, <a href="map.html" style="text-decoration: none;">confira o mapa.</a> 
+          </li>
+          <li>Escolha os produtos indicando as quantidades</li>
+          <li>Em seguida preencha o formulário com os seu dados</li>
+          <li>
+            Os pedidos serão entregues entre os
+            <strong>dias 29 de março e 1 de abril</strong>
+          </li>
+          <li>
+            Será cobrada uma taxa adicional de R$ 4.00 referente a entrega e
+            manuseio
+          </li>
+          <li>
+            O pagamento poderá ser realizado via pix ou cartão (débito/crédito -
+            até 3x ) no ato da entrega
+          </li>
+          <li>
+            Após a realização do pedido entraremos em contato para confirmação
+            do pedido e cobinar a entrega.
+          </li>
+        </ol>
+      </div>
+
+      <div class="wrapper_prod">
+        <form id="myForm">
+          <div class="prods">
+            <div class="card">
+              <img
+                src="images/jeans3.jpg"
+                alt="ovo paçoca"
+                style="width: 100%"
+              />
+              <h1>Ovo de colher Paçoca (150g)</h1>
+              <p class="price">R$ 20,00</p>
+              <p>Some text about the jeans..</p>
+              <input type="number" name="quant#1" min="0" /><br />
+            </div>
+          </div>
+
+          <div class="container_form">
+            <label id="label">Nome*</label>
+            <br />
+            <input name="nome" placeholder="nome" />
+            <br />
+
+            <label>e-mail*</label>
+            <br />
+            <input name="email" placeholder="e-mail" />
+            <br />
+
+            <label>Rua*</label>
+            <br />
+            <input name="rua" placeholder="rua, avenida, servidão..." />
+            <br />
+
+            <label>Número*</label>
+            <br />
+            <input name="numero" placeholder="123" />
+            <br />
+
+            <label>Complemento</label>
+            <br />
+            <input name="complemento" placeholder="apt, casa,...." />
+            <br />
+
+            <label>Bairro</label>
+            <br />
+            <input name="bairro" placeholder="bairro" />
+            <br />
+
+            <label>CEP*</label>
+            <br />
+            <input name="cep" placeholder="00000-000" />
+            <br />
+
+            <label
+              >Preferência de dia de entrega <br />(entre 29 de março e 1 de
+              abril)*</label
+            >
+            <br />
+            <input
+              type="date"
+              name="dia_entrega"
+              max="01/04/2021"
+              min="29/03/2021"
+            />
+            <br />
+
+            <label>Preferência de turno de entrega*</label> <br />
+            <select name="turno_entrega">
+              <option value="manha">manhã</option>
+              <option value="tarde">tarde</option>
+            </select>
+            <br />
+            <br />
+
+            <label>Message</label>
+            <br />
+            <textarea name="message" maxlength="150"></textarea>
+            <br />
+           
+          </div>
+        </form>
+      </div>
+      <div class="button_div">
+        <button onclick="SubForm()">Finalizar Pedido</button>
+      </div>
+    </div>
+  </body>
+</html>
